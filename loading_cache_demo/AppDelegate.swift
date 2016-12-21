@@ -11,6 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
+    var myCache:[String]?
+    
+    
     var window: UIWindow?
 
 
@@ -41,6 +45,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    
+    
+    // helper function
+    func moveToVC(mainScreen: MainViewController){
+        
+        
+        // Change the Root View Controller from the loadingVC to the homeVC
+        self.window?.rootViewController = mainScreen
+        self.window?.makeKeyAndVisible()
+        
+        
+        
+        
+    }
+
+    
+    
+    
 
 }
 

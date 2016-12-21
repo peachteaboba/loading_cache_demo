@@ -8,11 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    
+    @IBOutlet weak var mainLabel: UILabel!
+    var myData:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.mainLabel.text = self.myData!
+        
+        // Instantiate appDel and homeScreen constants
+        let appDel = (UIApplication.shared).delegate as! AppDelegate
+        
+        print(appDel.myCache?[0])
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
